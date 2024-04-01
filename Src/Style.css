@@ -1,0 +1,129 @@
+.navbar-images {
+    position: relative;
+    overflow: hidden;
+}
+
+.container-images {
+    display: flex;
+    overflow-x: hidden;
+    transition: transform 0.5s ease;
+}
+
+.container-images img {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button.prev,
+button.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    z-index: 1;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+.container-images img {
+    flex: 0 0 auto; 
+    max-width: 350px; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out; 
+}
+.logo {
+    width: 50px; 
+    height: auto; 
+    margin-right: 10px;
+}
+.footer {
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    text-align: left;
+    bottom: 0;
+    width: 100%;
+}
+.login-card {
+    background-color: #f8f9fa;
+    margin-bottom: 50px; 
+    width: 70%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    border: none; 
+    border-radius: 10px; 
+}
+
+.login-card .card-header {
+    background-color: transparent; 
+    border-bottom: none;
+}
+
+.login-card .btn-primary {
+    background-color: #37ac52; 
+    border-color: #ffffff; 
+}
+
+.login-card .btn-primary:hover {
+    background-color: #086e20; 
+    border-color: #050505; 
+    font-style:normal;
+    color: #ffffff;
+}
+.login-card-header {
+    background-color: #37ac52 !important; 
+}
+
+.login-card-header .card-title {
+    color: #ffffff; 
+    font-size: 22px;
+}
+
+h2 {
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #333; 
+    margin-bottom: 15px;
+}
+
+
+h3 {
+    font-size: 20px; 
+    font-weight: bold;
+    color: #666; 
+    margin-bottom: 10px; 
+}
+
+.navbar {
+    position: relative;
+}
+
+#buscarUsuarios {
+    position: absolute;
+    left: 80%;
+    transform: translateX(-50%);
+    bottom: 800px; 
+    max-width: 140px; 
+    background-color: #086e20; 
+    color: #fff;
+    border: none; 
+
+    border-radius: 5px; 
+}
+
+
+
