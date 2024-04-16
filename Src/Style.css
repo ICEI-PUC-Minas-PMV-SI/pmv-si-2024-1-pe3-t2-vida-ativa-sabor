@@ -54,9 +54,16 @@ button.next {
 .footer {
     background-color: #f8f9fa;
     padding: 15px 0;
-    text-align: left;
+    text-align: center;
     bottom: 0;
     width: 100%;
+    position: absolute;
+}
+.footer a img{
+max-width: 50px;
+max-height: 50px;
+width: auto;
+height: auto;
 }
 .login-card {
     background-color: #f8f9fa;
