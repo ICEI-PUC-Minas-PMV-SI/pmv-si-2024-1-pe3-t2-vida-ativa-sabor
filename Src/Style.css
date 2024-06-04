@@ -1,6 +1,130 @@
+.navbar {
+    background-color: rgba(194, 211, 212, 0.4);
+}
+
+.container-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0 41px;
+}
+
+.pesquisa {
+    border: 1px solid #585A56;
+    padding-right: 11px;
+    height: fit-content;
+    width: 685px;
+    display: flex;
+    align-items: center;
+}
+
+.pesquisa input {
+    width: 98%;
+    border: none;
+    padding: 10px 16px;
+    height: 30px;
+}
+
+.logo {
+    border-radius: 50%;
+}
+
+.body {
+    padding: 0 100px;
+    position: relative;
+}
+
+.banner {
+    width: 100%;
+    height: 460px;
+    background-image: url(../src/assets/NavBar/7.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+    margin-bottom: 34px;
+}
+
+.receitas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.exercicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+}
+.imagens {
+    width: 100%;
+}
+
+.imagens section {
+    display: flex;
+    margin-bottom: 20px;
+}
+.imagens section .imagem1 {
+   width: 65%;
+   height: 400px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.imagens section .imagem2 {
+    width: 35%;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+
+.title {
+    margin-bottom: 50px;
+}
+
+.title h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #272424;
+    font-weight: 500;
+    margin-bottom: 29px;
+}
+
+.title h2 {
+    text-align: center;
+    font-size: 16px;
+    color: #272424;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
 .navbar-images {
     position: relative;
     overflow: hidden;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+}
+
+.ver-mais {
+    width: 290px;
+    height: 40px;
+    background-color: #585A56;
+    border: none;
+    color: white;
+    font-size: 16px;
 }
 
 .container-images {
@@ -14,6 +138,9 @@
     margin-right: 10px;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    max-width: 350px; 
+    height: auto; 
+    transition: transform 0.3s ease-in-out; 
 }
 
 button.prev,
@@ -22,115 +149,123 @@ button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: none;
     border: none;
-    color: black;
+    color: #212121;
     font-size: 20px;
     padding: 10px;
-    z-index: 1;
+    z-index: 2;
 }
 
 button.prev {
-    left: 0;
+    left: 20px;
 }
 
 button.next {
-    right: 0;
+    right: 20px;
 }
 
-.container-images img {
-    flex: 0 0 auto; 
-    max-width: 350px; 
-    height: auto; 
-    border-radius: 10px; 
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease-in-out; 
-}
 .logo {
-    width: 50px; 
-    height: auto; 
+    width: 50px;
+    height: auto;
     margin-right: 10px;
 }
+
 .footer {
     background-color: #f8f9fa;
     padding: 15px 0;
-    text-align: center;
+    text-align: left;
     bottom: 0;
     width: 100%;
-    position: absolute;
 }
-.footer a img{
-max-width: 50px;
-max-height: 50px;
-width: auto;
-height: auto;
-}
+
 .login-card {
     background-color: #f8f9fa;
-    margin-bottom: 50px; 
-    width: 70%; 
-    margin-left: auto; 
-    margin-right: auto; 
-    border: none; 
-    border-radius: 10px; 
+    margin-bottom: 50px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 10px;
 }
 
 .login-card .card-header {
-    background-color: transparent; 
+    background-color: transparent;
     border-bottom: none;
 }
 
 .login-card .btn-primary {
-    background-color: #37ac52; 
-    border-color: #ffffff; 
+    background-color: #37ac52;
+    border-color: #ffffff;
 }
 
 .login-card .btn-primary:hover {
-    background-color: #086e20; 
-    border-color: #050505; 
-    font-style:normal;
+    background-color: #086e20;
+    border-color: #050505;
     color: #ffffff;
 }
+
 .login-card-header {
-    background-color: #37ac52 !important; 
+    background-color: #37ac52 !important;
 }
 
 .login-card-header .card-title {
-    color: #ffffff; 
+    color: #ffffff;
     font-size: 22px;
 }
 
-h2 {
-    font-size: 24px; 
-    font-weight: bold; 
-    color: #333; 
-    margin-bottom: 15px;
+#footer {
+    width: 100%;
+    height: 400px;
+    padding: 45px;
+    background-color: rgba(194, 211, 212, 0.4);
 }
 
-
-h3 {
-    font-size: 20px; 
-    font-weight: bold;
-    color: #666; 
-    margin-bottom: 10px; 
+#footer h1 {
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+    color: #272424;
+    letter-spacing: 0;
+    margin-bottom: 30px;
 }
 
-.navbar {
-    position: relative;
+.content {
+    display: flex;
+    justify-content: space-between;
 }
 
-#buscarUsuarios {
-    position: absolute;
-    left: 80%;
-    transform: translateX(-50%);
-    bottom: 800px; 
-    max-width: 140px; 
-    background-color: #086e20; 
-    color: #fff;
-    border: none; 
-
-    border-radius: 5px; 
+.content h2 {
+    color: #585A56;
+    font-size: 13px;
+    letter-spacing: 0;
+    text-align: justify;
+    width: 438px;
+    margin-right: 126px;
 }
 
+.perguntas {
+    display: flex;
+    flex-direction: column;
+    margin-right: 126px;
+}
 
+.perguntas h1 {
+    color: #272424 !important;
+    font-size: 18px !important;
+    margin-bottom: 17px !important;
+}
 
+.perguntas a {
+    color: #585A56 !important;
+    font-size: 14px !important; 
+    cursor: pointer !important;
+    margin-bottom: 17px !important;
+    text-decoration: underline !important;
+}
+
+.redes h2 {
+   font-size: 18px !important;
+   color: #272424 !important;
+   margin-bottom: 20px !important;
+}
