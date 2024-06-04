@@ -15,7 +15,7 @@
 
         .container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             grid-gap: 16px;
             padding: 16px;
         }
@@ -24,9 +24,10 @@
             background-color: white;
             border-radius: 4px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            overflow-y: scroll;
             padding: 20px;
             margin: 10px;
+           
         }
 
         .recipe-card img {
@@ -66,8 +67,6 @@
                 <input type="text" placeholder="Buscar Receitas...">
                 <img src="assets/Icones/search-i.svg" alt="">
             </div>
-
-            
     
             <a class="nav-link" href="login.html">Entre/Cadastre-se</a>
     
@@ -95,7 +94,6 @@
                         <li class="ingredient-item">Pepino</li>
                         <li class="ingredient-item">Tomate em cubos</li>
                         <li class="ingredient-item">Limão</li>
-                    </ul>
                 </div>
                 <div class="recipe-card">
                     <img src="assets/NavBar/3.webp" alt="Salada Tropical">
