@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/Icones/V.png" type="image/x-icon">
+    <style>
+       
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          padding: 30px;
+        }
+        
+        .image-container {
+          margin-right: 80px;
+          margin-top: 50px;
+        }
+        
+        .recipe-container {
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+        }
+        
+        .title {
+          font-size: 24px;
+          font-weight: bold;
+          margin-top: 50px;
+        }
+        
+        .rating {
+          display: flex;
+          gap: 10px;
+        }
+        
+        .star {
+          color: gold;
+        }
+        
+        .button {
+          background-color: #ff9900;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 5px;
+          text-decoration: none;
+          width: 200px;
+        }
+        
+        .info {
+          display: flex;
+          gap: 10px;
+        }
+        
+        .ingredients-container, .preparation-container {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 40px;
+        }
+        
+        .ingredients-title, .preparation-title {
+          font-weight: bold;
+        }
+        
+        .ingredients-list, .preparation-list {
+          list-style-type: disc;
+       
+        }
+        </style>
+    <title>Vida Ativa & Sabor</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-nav">
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="assets/Logos/Logo.jpg" alt="Logo" class="logo">
+                Vida Ativa & Sabor
+            </a>
+
+            <div class="pesquisa">
+                <input type="text" placeholder="Buscar Receitas...">
+                <img src="assets/Icones/search-i.svg" alt="">
+            </div>
+
+            
+    
+            <a class="nav-link" href="login.html">Entre/Cadastre-se</a>
+    
+        </div>
+    </nav>
+
+    
+
+    <div class="body">
+    
+    
+        <div class="container">
+            <div class="image-container">
+              <img src="assets/NavBar/3.webp" alt="Salada Tropical" style="width: 300px;">
+            </div>
+            <div class="recipe-container">
+              <div class="title">Salada Tropical</div>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+              </div>
+              <a href="#" class="button">Deixe sua avaliação</a>
+              <div class="info">
+                <h5>Rendimento:</h5><p>2 porções</p>
+                <h5> Tempo de Preparo:</h5> <p>10 minutos</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="container">
+              <div class="ingredients-container">
+                <div class="ingredients-title"><h4>Ingredientes:</h4></div>
+                <ul class="ingredients-list">
+                  <li>4 folhas de alface americana picadas</li>
+                  <li>2 mangas em cubos</li>
+                  <li>3 tomates em cubos</li>
+                  <li>1 cebola roxa</li>
+                  <li>1 pepino</li>
+                  <li>Suco de meio limão</li>
+                  <li>Sal a gosto</li>
+                </ul>
+              </div>
+              <div class="preparation-container">
+                <div class="preparation-title"><h4>Modo de Preparo:</h4></div>
+                <ul class="preparation-list">
+                  <li>Em um recipiente adicione as alface, mangas, tomates, pepino e a cebola.</li>
+                  <li>Misture tudo.</li>
+                  <li>Adicione o suco de limão aos poucos.</li>
+                  <li>Mexa bem.</li>
+                  <li>Acrescente o sal a gosto.</li>
+                  <li>Está pronto para servir!</li>
+                </ul>
+              </div>
+            </div>
+        
+    
+    </div>
+
+<footer>
+    <div id="footer">
+        <h1>Sobre nós</h1>
+
+        <div class="content">
+            <h2>Bem-vindo ao "Vida Ativa & Sabor"! Somos apaixonados por promover um estilo de vida equilibrado, onde a atividade física e uma alimentação saudável se encontram para proporcionar bem-estar e satisfação. Em nosso site, você encontrará uma variedade de receitas deliciosas e nutritivas, cuidadosamente selecionadas para nutrir seu corpo e satisfazer seu paladar.
+                Além disso, oferecemos uma ampla gama de dicas e orientações sobre exercícios físicos, desde treinos de força até atividades cardiovasculares, projetadas para ajudá-lo a alcançar seus objetivos de fitness e se manter motivado em sua jornada para uma vida mais ativa.
+                Nossa missão é inspirar e capacitar você a adotar hábitos saudáveis de maneira prática e acessível. Queremos ser seu guia confiável na busca por uma vida mais saudável e mais feliz. Junte-se a nós nesta jornada de descoberta e transformação, onde o sabor se encontra com a vitalidade. Vamos viver ativamente e com muito sabor!</h2>
+
+
+                <section class="perguntas">
+                    <h1>Perguntas Frequentes</h1>
+                    <a>Política de Privacidade</a>
+                    <a>Central de Privacidade</a>
+                    <a>Termos de Uso</a>
+                </section>
+
+                <section class="redes">
+                    <h2>Redes Sociais</h2>
+                    <div style="display: flex;">
+                    <img style="margin-right: 22px;" src="../src/assets/Icones/instagram.svg" alt="">
+                    <img style="margin-right: 22px;" src="../src/assets/Icones/whatsapp.svg" alt="">
+                    <img src="../src/assets/Icones/telegram.svg" alt="">
+                    </div>
+                    
+                </section>
+        </div>
+    </div>
+
+
+</footer>
