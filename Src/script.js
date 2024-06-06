@@ -85,3 +85,21 @@ function scrollImages(direction) {
     }
 }
 
+
+
+
+
+const verMaisReceitaButton = document.getElementById('receitas');
+
+verMaisReceitaButton.addEventListener('click', function() {
+
+    window.location.href = '/Src/receitas.html';
+});
+
+const verMaisExercicioButton = document.getElementById('exercicios');
+
+verMaisExercicioButton.addEventListener('click', function() {
+
+    window.location.href = '/Src/exercícios.html';
+});
+
