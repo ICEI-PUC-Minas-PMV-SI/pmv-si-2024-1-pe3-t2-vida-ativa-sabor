@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/Icones/V.png" type="image/x-icon">
+    <title>Vida Ativa & Sabor</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-nav">
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="assets/Logos/Logo.jpg" alt="Logo" class="logo">
+                Vida Ativa & Sabor
+            </a>
+
+            <div class="pesquisa">
+                <input type="text" placeholder="Buscar Receitas...">
+                <img src="assets/Icones/search-i.svg" alt="">
+            </div>
+
+            
+    
+            <a class="nav-link" href="login.html">Entre/Cadastre-se</a>
+    
+        </div>
+    </nav>
+
+    <div class="body">
+    
+        <h1>Cadastro de Receitas</h1>
+
+        <div class="container">
+            <div class="row">
+                <div id="msg" class="col-sm-10 offset-sm-1 ">
+                    <!--<div class="alert alert-warning">Contato não encontrado.</div>-->
+                </div>
+            </div>
+    
+            <form id="form-contato">
+                
+                    <div class="col-sm-8">
+                        <label for="inputId">Id</label>
+                        <input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
+                    </div>
+                    <div class="col-sm-8">
+                        <label for="inputTitulo">Título (*)</label>
+                        <input type="text" class="form-control" id="inputTitulo" required placeholder="Digite aqui o título da receita...">
+                    </div>
+                
+                
+                    <div class="col-sm-8">
+                        <label for="inputRendimento">Rendimento (*)</label>
+                        <input type="text" class="form-control" id="inputRendimento" required placeholder="Digite aqui a quantidade de porções...">
+                    </div>
+                    <div class="col-sm-8">
+                        <label for="inputTP">Tempo de Preparo (*)</label>
+                        <input type="text" class="form-control" id="inputTP" required placeholder="Digite aqui o tempo de preparo...">
+                    </div>
+
+                    <div class="col-sm-8">
+                        <label for="inputIngredientes">Ingredientes (*)</label>
+                        <input type="text" class="form-control" id="inputIngredientes" required placeholder="Digite aqui os ingredientes...">
+                    </div>
+
+                    <div class="col-sm-8">
+                        <label for="inputMP">Modo de Preparo (*)</label>
+                        <input type="text" class="form-control" id="inputMP" required placeholder="Digite aqui o modo de preparo...">
+                    </div>
+                
+              
+                
+                    <div class="col-sm-4">
+                        <small>(*) Campos obrigatórios</small>
+                    </div>
+                <br>
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
+                        <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
+                        <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
+                    </div>
+                </div><br>
+            </form>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table id="grid-contatos" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Rendimento</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-receitas">
+                            <tr>
+                                <td scope="row">1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+<footer>
+    <div id="footer">
+        <h1>Sobre nós</h1>
+
+        <div class="content">
+            <h2>Bem-vindo ao "Vida Ativa & Sabor"! Somos apaixonados por promover um estilo de vida equilibrado, onde a atividade física e uma alimentação saudável se encontram para proporcionar bem-estar e satisfação. Em nosso site, você encontrará uma variedade de receitas deliciosas e nutritivas, cuidadosamente selecionadas para nutrir seu corpo e satisfazer seu paladar.
+                Além disso, oferecemos uma ampla gama de dicas e orientações sobre exercícios físicos, desde treinos de força até atividades cardiovasculares, projetadas para ajudá-lo a alcançar seus objetivos de fitness e se manter motivado em sua jornada para uma vida mais ativa.
+                Nossa missão é inspirar e capacitar você a adotar hábitos saudáveis de maneira prática e acessível. Queremos ser seu guia confiável na busca por uma vida mais saudável e mais feliz. Junte-se a nós nesta jornada de descoberta e transformação, onde o sabor se encontra com a vitalidade. Vamos viver ativamente e com muito sabor!</h2>
+
+
+                <section class="perguntas">
+                    <h1>Perguntas Frequentes</h1>
+                    <a>Política de Privacidade</a>
+                    <a>Central de Privacidade</a>
+                    <a>Termos de Uso</a>
+                </section>
+
+                <section class="redes">
+                    <h2>Redes Sociais</h2>
+                    <div style="display: flex;">
+                    <img style="margin-right: 22px;" src="../src/assets/Icones/instagram.svg" alt="">
+                    <img style="margin-right: 22px;" src="../src/assets/Icones/whatsapp.svg" alt="">
+                    <img src="../src/assets/Icones/telegram.svg" alt="">
+                    </div>
+                    
+                </section>
+        </div>
+    </div>
+
+
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-QFUBQA+1knX9GfQTvSnsI5sViT3wfsih30w4Q6/FZabWM2KjkQFI4wdoQPsmJ9Uj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-MNJu6DvPauZgjB0Gtms3/Co2DmMCAw/i7D41cYpYDd1h81FZfZ9Bj8yzpL3D2s7H" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</body>
+</html>
