@@ -93,13 +93,13 @@ const verMaisReceitaButton = document.getElementById('receitas');
 
 verMaisReceitaButton.addEventListener('click', function() {
 
-    window.location.href = '/Src/receitas.html';
+    window.location.href = 'receitas.html';
 });
 
 const verMaisExercicioButton = document.getElementById('exercicios');
 
 verMaisExercicioButton.addEventListener('click', function() {
 
-    window.location.href = '/Src/exercícios.html';
+    window.location.href = 'exercícios.html';
 });
 
