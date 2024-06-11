@@ -8,26 +8,12 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="assets/Icones/V.png" type="image/x-icon">
-    <style>
-
-        .exercicios h1 {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .exercicios h2{
-            margin-bottom: 20px;
-        }
-
-        .exercicios p {
-            text-align: center;
-        }
-    </style>
     <title>Vida Ativa & Sabor</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-nav">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="#">
                 <img class="logo" src="assets/Logos/Logo.jpg" alt="Logo" class="logo">
                 Vida Ativa & Sabor
             </a>
@@ -55,43 +41,67 @@
         </div>
     </nav>
 
-   
-
     <div class="body">
-        <div class="exercicios">
+    
+        <h1>Cadastro de Receitas</h1>
 
-            <div class="title">
-                <h1>Flexões</h1>
-            </div>
-
-            <div class="navbar-images">
-                <div class="container container-images">
-                    <img src="assets/NavBar/6.jpg" class="img-fluid active" alt="Imagem 1">
-                    <img src="assets/NavBar/6.jpg" class="img-fluid" alt="Imagem 2">
-                    <img src="assets/NavBar/6.jpg" class="img-fluid" alt="Imagem 3">
-                    <img src="assets/NavBar/6.jpg" class="img-fluid" alt="Imagem 4">
-                    <img src="assets/NavBar/6.jpg" class="img-fluid" alt="Imagem 5">
-                    
+        <div class="container">
+            <div class="row">
+                <div id="msg" class="col-sm-10 offset-sm-1 ">
+                    <!--<div class="alert alert-warning">Contato não encontrado.</div>-->
                 </div>
-                <button class="prev">&#10094;</button>
-                <button class="next">&#10095;</button>
             </div>
-
-            <h2>Passo a passo</h2>
-        <ol>
-            <li>Apoiar as mão no chão a uma distância um pouco maior que a largura dos ombros, mantendo os dedos voltados para frente e cotovelos, para trás;</li>
-            <li>Esticar as pernas para trás, fazendo uma linha reta com o corpo da cabeça aos pés;</li>
-            <li>Manter os pés juntos, tocando o chão apenas com os dedos;</li>
-            <li>Estabilizar os ombros acima dos pulsos. Esta é a posição inicial;</li>
-            <li>Descer lentamente com o corpo até que o peito fique próximo do chão, dobrando os cotovelos e mantendo-os próximos ao tronco;</li>
-            <li>Elevar o corpo lentamente de volta para posição inicial, empurrando o chão com as mãos;</li>
-            <li>Repetir o movimento a partir da posição inicial.</li>
-        </ol>
-
+    
+            <form id="form-contato">
+                
+                    <div class="col-sm-8">
+                        <label for="inputId">Id</label>
+                        <input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
+                    </div>
+                    <div class="col-sm-8">
+                        <label for="inputTitulo">Título (*)</label>
+                        <input type="text" class="form-control" id="inputTitulo" required placeholder="Digite aqui o título do exercício...">
+                    </div>
+                    <div class="col-sm-8">
+                        <label for="inputPasso">Passo a passo (*)</label>
+                        <input type="text" class="form-control" id="inputPasso" required placeholder="Digite aqui o passo a passo do exercício...">
+                    </div>
+                
+                    <div class="col-sm-4">
+                        <small>(*) Campos obrigatórios</small>
+                    </div>
+                <br>
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
+                        <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
+                        <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
+                    </div>
+                </div><br>
+            </form>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table id="grid-contatos" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Passo a passo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-receitas">
+                            <tr>
+                                <td scope="row">1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-
-
-
+    
+    </div>
 
 <footer>
     <div id="footer">
@@ -124,4 +134,9 @@
 
 
 </footer>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-QFUBQA+1knX9GfQTvSnsI5sViT3wfsih30w4Q6/FZabWM2KjkQFI4wdoQPsmJ9Uj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-MNJu6DvPauZgjB0Gtms3/Co2DmMCAw/i7D41cYpYDd1h81FZfZ9Bj8yzpL3D2s7H" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</body>
+</html>
