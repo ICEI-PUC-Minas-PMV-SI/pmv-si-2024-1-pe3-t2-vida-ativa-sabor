@@ -14,6 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
             controlUsersBtn.className = "nav-item";
             controlUsersBtn.innerHTML = '<a class="nav-link" href="controle.html">Controle de Usuários</a>';
             document.getElementById("userNav").appendChild(controlUsersBtn);
+        } else {
+            var controlUsersBtn = document.createElement("li");
+            controlUsersBtn.className = "nav-item";
+            controlUsersBtn.innerHTML = '<a class="nav-link" href="controle.html">Controle de Usuário</a>';
+            document.getElementById("userNav").appendChild(controlUsersBtn);
         }
         
         var logoutButton = document.createElement("a");

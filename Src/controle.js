@@ -1,7 +1,20 @@
+function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.startsWith(name + '=')) {
+            return cookie.substring(name.length + 1);
+        }
+    }
+    return '';
+}
 document.addEventListener("DOMContentLoaded", function() {
     const buscarUsuariosButton = document.getElementById("buscarUsuarios");
     if (buscarUsuariosButton) {
         buscarUsuariosButton.addEventListener("click", function() {
+            const userId = getCookie("id"); // Obtém o ID do usuário logado
+            console.log("ID do usuário logado:", userId);
+            
             fetch('/usuarios')
                 .then(response => {
                     if (!response.ok) {
@@ -10,89 +23,102 @@ document.addEventListener("DOMContentLoaded", function() {
                     return response.json();
                 })
                 .then(data => {
+                    console.log("Dados recebidos:", data); // Verifica se os dados foram recebidos corretamente
+                    
                     const tabelaUsuarios = document.getElementById('usersTableBody');
                     if (!tabelaUsuarios) {
                         console.error('Elemento com o ID "usersTableBody" não encontrado no DOM.');
                         return;
                     }
+                    
                     tabelaUsuarios.innerHTML = '';
                     
                     data.forEach(usuario => {
-                        const tr = document.createElement('tr');
-                        tr.innerHTML = `
-                            <td class="editable">${usuario.ID}</td>
-                            <td class="editable">${usuario.NOME}</td>
-                            <td class="editable">${usuario.DATNAS}</td>
-                            <td class="editable">${usuario.EMAIL}</td>
-                            <td class="editable">${usuario.SENHA}</td>
-                            <td class="editable">${usuario.TEL}</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-primary editarUsuario">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button class="btn btn-sm btn-success salvarEdicaoUsuario" style="display: none;">
-                                    <i class="bi bi-check"></i>
-                                </button>
-                            </td>
-                        `;
-                        tabelaUsuarios.appendChild(tr);
-
-                        const editarUsuarioButton = tr.querySelector('.editarUsuario');
-                        const salvarEdicaoUsuarioButton = tr.querySelector('.salvarEdicaoUsuario');
-                        editarUsuarioButton.addEventListener("click", function() {
-                            tr.querySelectorAll('.editable').forEach(cell => {
-                                const textoAtual = cell.textContent.trim();
-                                const input = document.createElement('input');
-                                input.value = textoAtual;
-                                cell.textContent = '';
-                                cell.appendChild(input);
+                        console.log("ID do usuário do registro:", usuario.ID);
+                        
+                        // Verifica se o ID do usuário é igual ao ID do usuário logado
+                        if (usuario.ID === parseInt(userId)) { // Convertendo userId para inteiro para garantir a comparação correta
+                            const tr = document.createElement('tr');
+                            tr.innerHTML = `
+                                <td class="editable">${usuario.ID}</td>
+                                <td class="editable">${usuario.NOME}</td>
+                                <td class="editable">${usuario.DATNAS}</td>
+                                <td class="editable">${usuario.EMAIL}</td>
+                                <td class="editable">${usuario.SENHA}</td>
+                                <td class="editable">${usuario.TEL}</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary editarUsuario">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-success salvarEdicaoUsuario" style="display: none;">
+                                        <i class="bi bi-check"></i>
+                                    </button>
+                                </td>
+                            `;
+                            tabelaUsuarios.appendChild(tr);
+                            
+                            const editarUsuarioButton = tr.querySelector('.editarUsuario');
+                            const salvarEdicaoUsuarioButton = tr.querySelector('.salvarEdicaoUsuario');
+                            
+                            editarUsuarioButton.addEventListener("click", function() {
+                                tr.querySelectorAll('.editable').forEach(cell => {
+                                    const textoAtual = cell.textContent.trim();
+                                    const input = document.createElement('input');
+                                    input.value = textoAtual;
+                                    cell.textContent = '';
+                                    cell.appendChild(input);
+                                });
+                                editarUsuarioButton.style.display = 'none';
+                                salvarEdicaoUsuarioButton.style.display = 'inline-block';
                             });
-                            editarUsuarioButton.style.display = 'none';
-                            salvarEdicaoUsuarioButton.style.display = 'inline-block';
-                        });
-
-                        salvarEdicaoUsuarioButton.addEventListener("click", function() {
-                            const rowData = {
-                                ID: tr.cells[0].querySelector('input').value,
-                                NOME: tr.cells[1].querySelector('input').value,
-                                DATNAS: tr.cells[2].querySelector('input').value,
-                                EMAIL: tr.cells[3].querySelector('input').value,
-                                SENHA: tr.cells[4].querySelector('input').value,
-                                TEL: tr.cells[5].querySelector('input').value
-                            };
-
-                            console.log("Dados editados:", rowData);
-
-                            fetch('/editar-usuario', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json'
-                                },
-                                body: JSON.stringify(rowData)
-                            })
-                            .then(response => {
-                                /*if (!response.ok) {
-                                    throw new Error('Erro ao editar usuário');
-                                }*/
-                                return response.json();
-                            })
-                            .then(data => {
-                                console.log('Usuário editado com sucesso:', data);
-                              
-                            })
-                            .catch(error => {
-                                console.error('Erro ao editar usuário:', error);
+                            
+                            salvarEdicaoUsuarioButton.addEventListener("click", function() {
+                                const rowData = {
+                                    ID: tr.cells[0].querySelector('input').value,
+                                    NOME: tr.cells[1].querySelector('input').value,
+                                    DATNAS: tr.cells[2].querySelector('input').value,
+                                    EMAIL: tr.cells[3].querySelector('input').value,
+                                    SENHA: tr.cells[4].querySelector('input').value,
+                                    TEL: tr.cells[5].querySelector('input').value
+                                };
                                 
+                                console.log("Dados editados:", rowData);
+                                
+                                fetch('/editar-usuario', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify(rowData)
+                                })
+                                .then(response => {
+                                    return response.json();
+                                })
+                                .then(data => {
+                                    console.log('Usuário editado com sucesso:', data);
+                                    
+                                    tr.querySelectorAll('.editable').forEach(cell => {
+                                        const input = cell.querySelector('input');
+                                        cell.textContent = input.value;
+                                    });
+                                    
+                                    editarUsuarioButton.style.display = 'inline-block';
+                                    salvarEdicaoUsuarioButton.style.display = 'none';
+                                })
+                                .catch(error => {
+                                    console.error('Erro ao editar usuário:', error);
+                                    
+                                    // Em caso de erro, mantenha os campos editáveis e os botões de edição visíveis
+                                    tr.querySelectorAll('.editable').forEach(cell => {
+                                        const input = cell.querySelector('input');
+                                        cell.textContent = input.value;
+                                    });
+                                    
+                                    editarUsuarioButton.style.display = 'inline-block';
+                                    salvarEdicaoUsuarioButton.style.display = 'none';
+                                });
                             });
-
-                            tr.querySelectorAll('.editable').forEach(cell => {
-                                const input = cell.querySelector('input');
-                                cell.textContent = input.value;
-                            });
-
-                            editarUsuarioButton.style.display = 'inline-block';
-                            salvarEdicaoUsuarioButton.style.display = 'none';
-                        });
+                        }
                     });
                 })
                 .catch(error => {
