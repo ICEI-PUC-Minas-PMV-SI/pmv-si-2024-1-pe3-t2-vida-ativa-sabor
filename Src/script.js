@@ -14,6 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
             controlUsersBtn.className = "nav-item";
             controlUsersBtn.innerHTML = '<a class="nav-link" href="controle.html">Controle de Usuários</a>';
             document.getElementById("userNav").appendChild(controlUsersBtn);
+        } else {
+            var controlUsersBtn = document.createElement("li");
+            controlUsersBtn.className = "nav-item";
+            controlUsersBtn.innerHTML = '<a class="nav-link" href="controle.html">Controle de Usuário</a>';
+            document.getElementById("userNav").appendChild(controlUsersBtn);
         }
         
         var logoutButton = document.createElement("a");
@@ -93,13 +98,13 @@ const verMaisReceitaButton = document.getElementById('receitas');
 
 verMaisReceitaButton.addEventListener('click', function() {
 
-    window.location.href = '/Src/receitas.html';
+    window.location.href = 'receitas.html';
 });
 
 const verMaisExercicioButton = document.getElementById('exercicios');
 
 verMaisExercicioButton.addEventListener('click', function() {
 
-    window.location.href = '/Src/exercícios.html';
+    window.location.href = 'exercícios.html';
 });
 
