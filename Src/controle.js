@@ -8,13 +8,14 @@ function getCookie(name) {
     }
     return '';
 }
+
 document.addEventListener("DOMContentLoaded", function() {
     const buscarUsuariosButton = document.getElementById("buscarUsuarios");
     if (buscarUsuariosButton) {
         buscarUsuariosButton.addEventListener("click", function() {
             const userId = getCookie("id"); // Obtém o ID do usuário logado
-            console.log("ID do usuário logado:", userId);
-            
+            const userRole = getCookie("adm"); // Obtém o papel do usuário logado (administrador ou não)
+
             fetch('/usuarios')
                 .then(response => {
                     if (!response.ok) {
@@ -24,20 +25,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 })
                 .then(data => {
                     console.log("Dados recebidos:", data); // Verifica se os dados foram recebidos corretamente
-                    
+
                     const tabelaUsuarios = document.getElementById('usersTableBody');
                     if (!tabelaUsuarios) {
                         console.error('Elemento com o ID "usersTableBody" não encontrado no DOM.');
                         return;
                     }
-                    
+
                     tabelaUsuarios.innerHTML = '';
-                    
+
                     data.forEach(usuario => {
-                        console.log("ID do usuário do registro:", usuario.ID);
-                        
-                        // Verifica se o ID do usuário é igual ao ID do usuário logado
-                        if (usuario.ID === parseInt(userId)) { // Convertendo userId para inteiro para garantir a comparação correta
+                        // Se for administrador ou se o ID do usuário for igual ao ID do usuário logado
+                        if (userRole === "S" || usuario.ID === parseInt(userId)) {
                             const tr = document.createElement('tr');
                             tr.innerHTML = `
                                 <td class="editable">${usuario.ID}</td>
@@ -56,10 +55,10 @@ document.addEventListener("DOMContentLoaded", function() {
                                 </td>
                             `;
                             tabelaUsuarios.appendChild(tr);
-                            
+
                             const editarUsuarioButton = tr.querySelector('.editarUsuario');
                             const salvarEdicaoUsuarioButton = tr.querySelector('.salvarEdicaoUsuario');
-                            
+
                             editarUsuarioButton.addEventListener("click", function() {
                                 tr.querySelectorAll('.editable').forEach(cell => {
                                     const textoAtual = cell.textContent.trim();
@@ -71,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 editarUsuarioButton.style.display = 'none';
                                 salvarEdicaoUsuarioButton.style.display = 'inline-block';
                             });
-                            
+
                             salvarEdicaoUsuarioButton.addEventListener("click", function() {
                                 const rowData = {
                                     ID: tr.cells[0].querySelector('input').value,
@@ -81,9 +80,9 @@ document.addEventListener("DOMContentLoaded", function() {
                                     SENHA: tr.cells[4].querySelector('input').value,
                                     TEL: tr.cells[5].querySelector('input').value
                                 };
-                                
+
                                 console.log("Dados editados:", rowData);
-                                
+
                                 fetch('/editar-usuario', {
                                     method: 'POST',
                                     headers: {
@@ -96,24 +95,24 @@ document.addEventListener("DOMContentLoaded", function() {
                                 })
                                 .then(data => {
                                     console.log('Usuário editado com sucesso:', data);
-                                    
+
                                     tr.querySelectorAll('.editable').forEach(cell => {
                                         const input = cell.querySelector('input');
                                         cell.textContent = input.value;
                                     });
-                                    
+
                                     editarUsuarioButton.style.display = 'inline-block';
                                     salvarEdicaoUsuarioButton.style.display = 'none';
                                 })
                                 .catch(error => {
                                     console.error('Erro ao editar usuário:', error);
-                                    
+
                                     // Em caso de erro, mantenha os campos editáveis e os botões de edição visíveis
                                     tr.querySelectorAll('.editable').forEach(cell => {
                                         const input = cell.querySelector('input');
                                         cell.textContent = input.value;
                                     });
-                                    
+
                                     editarUsuarioButton.style.display = 'inline-block';
                                     salvarEdicaoUsuarioButton.style.display = 'none';
                                 });
