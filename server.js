@@ -10,8 +10,23 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src'));
-
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'src')));
+
+app.post('/dados', (req, res) => {
+    const { titulo, rendimento, modoPreparo, ingredientes, mp } = req.body;
+
+    const query = `INSERT INTO RECEITA (NOME, MODPREPAR, RENDIMNT, INGREDNT) VALUES (?, ?, ?, ?)`;
+    db.run(query, [titulo, modoPreparo, rendimento, ingredientes], function(err) {
+        if (err) {
+            console.error('Erro ao inserir dados:', err.message);
+            res.status(500).json({ error: err.message });
+        } else {
+            res.json({ message: 'Dados salvos com sucesso!', id: this.lastID });
+        }
+    });
+});
+
 
 app.get('/login', (req, res) => {
     res.render('login', { nome: '' }); 
@@ -94,3 +109,7 @@ app.post('/editar-usuario', (req, res) => {
     );
 });
 
+// Iniciar o servidor
+app.listen(port, () => {
+    console.log(`Servidor rodando em http://localhost:${port}`);
+});
