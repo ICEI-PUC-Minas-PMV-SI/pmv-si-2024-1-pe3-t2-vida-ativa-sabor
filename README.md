@@ -32,7 +32,7 @@ romulochavesferraz@gmail.com
 
 ---
 
-**1. Introdução**
+## 1. Introdução
 
 &nbsp;&nbsp;&nbsp;&nbsp;A alimentação desempenha um papel crucial na promoção da saúde e no bem-estar humano. No Brasil, as primeiras medidas voltadas para alimentação e nutrição surgiram a partir da segunda metade da década de 1930. Em 1940, foi criado o Serviço de Alimentação da Previdência Social (SAPS) com o objetivo de tornar as refeições acessíveis aos trabalhadores (Fogagnoli, 2013).
 
@@ -80,7 +80,9 @@ romulochavesferraz@gmail.com
 
 &nbsp;&nbsp;&nbsp;&nbsp;O sistema proposto tem como objetivo alcançar pessoas com o desejo de manter uma vida saudável sem renunciar ao sabor nas refeições de forma caseira, trazendo tanto receitas de fácil preparo quanto as mais elaboradas. O conceito do projeto contém o poder de levar pessoas a aderir a esse estilo de vida, uma vez que um dos maiores impeditivos para isso é exatamente a restrição alimentícia.
 
-**2. ESTADO DA ARTE** 
+---
+
+## 2. ESTADO DA ARTE
 
 &nbsp;&nbsp;&nbsp;&nbsp;Alimentação Saudável: Um Estado da Arte. 
 
@@ -96,7 +98,9 @@ romulochavesferraz@gmail.com
 
 &nbsp;&nbsp;&nbsp;&nbsp;Em conclusão, compreender a complexidade dessas questões é crucial para promover uma abordagem equilibrada em relação à alimentação. Reconhecendo os desafios enfrentados pela sociedade moderna, visamos garantir não apenas a saúde física, mas também o bem-estar psicológico, destacando a necessidade de uma pesquisa contínua e aprofundada para abordar as lacunas existentes. 
 
-**3. DOCUMENTO DE ESPECIFICAÇÃO DE REQUISITOS DE SOFTWARE**
+---
+
+## 3. DOCUMENTO DE ESPECIFICAÇÃO DE REQUISITOS DE SOFTWARE
 
 **3.1 Objetivos deste documento** 
 
@@ -126,7 +130,11 @@ romulochavesferraz@gmail.com
 | 4 | Facilidade no cadastro de usuários                          | Essencial 
 | 5 | Facilidade na consulta de receitas                          | Essencial 
 
+<br>
+
+
 **3.3 Descrição geral do produto**
+
 **3.3.1 Requisitos Funcionais**
 | Código | Funcionalidade                                              | Descrição
 |--------|-------------------------------------------------------------|-------------|
@@ -139,6 +147,8 @@ romulochavesferraz@gmail.com
 | RF7 | Comentário                                                     | Permitir que o usuário envie suas dúvidas e sugestões em comentários 
 | RF8 | Entrar no Sistema                                              | Permitir que o usuário seja capaz de se “logar” ao sistema 
 | RF9 | Sair do Sistema                                                | Permitir que o usuário possa se “deslogar”  
+
+<br>
 
 **3.3.1 Requisitos Não Funcionais**
 | Código | Funcionalidade                                   | Descrição
@@ -154,6 +164,8 @@ romulochavesferraz@gmail.com
 | 1 | Usuário Comum                                    | Usuário responsável pelo cadastro parcial de receitas e cadastro de suas próprias informações no perfil 
 | 2 | Administrador                                    | Usuário responsável pelo cadastro parcial de receitas e pelo gerenciamento geral do sistema
 | 3 | Profissional Ed. Física                          | Usuário responsável pelo cadastro de exercícios físicos   
+
+<br>
 
 **3.4 Modelagem do Sistema**
 
@@ -335,7 +347,9 @@ romulochavesferraz@gmail.com
 &nbsp;&nbsp;&nbsp;&nbsp;A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a identificação do funcionário responsável pelo registro, bem com os dados do aluno e turmas. Para uma disciplina podemos ter diversas turmas, mas apenas um professor responsável por ela. 
 
 <p align="center"> Figura 2: Diagrama de Classes do Sistema. </p>
-&nbsp;&nbsp;&nbsp;&nbsp;IMAGEM
+<p align="center">
+<img src="Imagens/Diagramas/Diagrama de Classes.jpeg" alt="Logo" width="770" height="450">
+</p>
 
 **3.4.3 Diagrama de Classes**
 | # | Nome                                   | Descrição
@@ -349,34 +363,123 @@ romulochavesferraz@gmail.com
 | 7 | Exercício                              | Detalha a estrutura de um exercício, com título, duração, dificuldade, foto e descrição. Permite operações para adicionar, editar, remover e consultar um exercício. 
 | 8 | Comentário                             | Permite adicionar comentários aos exercícios, contendo o texto do comentário. Permite operações para adicionar e remover um comentário. 
 
+---
 
-**4. PROJETO DO DESIGN DE INTERAÇÃO**
+## 4. PROJETO DO DESIGN DE INTERAÇÃO
 
 **4.1. Personas**
 
+&nbsp;&nbsp;&nbsp;&nbsp;4.1.1 Rodrigo Pimentel:
+<p align="center">
+<img src="Imagens/Persona/persona rodrigo.jpeg" alt="Rodrigo" width="450" height="670">
+</p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;4.1.2 Ana Luiza Maia:
+<p align="center">
+<img src="Imagens/Persona/persona ana luiza.jpeg" alt="Ana Luiza" width="450" height="670">
+</p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;4.1.3 Luciana Azevedo:
+<p align="center">
+<img src="Imagens/Persona/persona luciana.jpeg" alt="Luciana" width="450" height="670">
+</p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;4.1.4 Luiz Silva:
+<p align="center">
+<img src="Imagens/Persona/persona luiz.jpeg" alt="Luiz" width="450" height="670">
+</p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;4.1.5 Murilo Bonfim:
+<p align="center">
+<img src="Imagens/Persona/persona murilo.jpeg" alt="Murilo" width="450" height="670">
+</p>
+
+
 **4.2. Mapa da Empatia**
+
+&nbsp;&nbsp;&nbsp;&nbsp;4.2.1 Rodrigo Pimentel:
+<p align="center">
+<img src="Imagens/Mapa da Empatia/Rodrigo.png" alt="Rodrigo" width="750" height="550">
+</p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;4.2.2 Ana Luiza Maia:
+<p align="center">
+<img src="Imagens/Mapa da Empatia/Ana Luisa.png" alt="Ana Luiza" width="750" height="550">
+</p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;4.2.3 Luciana Azevedo:
+<p align="center">
+<img src="Imagens/Mapa da Empatia/Luciana.png" alt="Luciana" width="750" height="550">
+</p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;4.2.4 Luiz Silva:
+<p align="center">
+<img src="Imagens/Mapa da Empatia/Luiz.png" alt="Luiz" width="750" height="550">
+</p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;4.2.5 Murilo Bonfim:
+<p align="center">
+<img src="Imagens/Mapa da Empatia/Murilo.png" alt="Luiz" width="750" height="550">
+</p>
 
 **4.3 Protótipos das Interfaces** 
 
-&nbsp;&nbsp;&nbsp;&nbsp;4.1.1 Tela inicial: 
+&nbsp;&nbsp;&nbsp;&nbsp;4.3.1 Tela inicial: 
+<p align="center">
+<img src="Imagens/Figma/Tela Inicial.png" height="850">
+</p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;4.1.2 Tela de “confirmar a exclusão”: 
+&nbsp;&nbsp;&nbsp;&nbsp;4.3.2 Tela de “confirmar a exclusão”: 
+<p align="center">
+<img src="Imagens/Figma/Confirmar Exclusão.png" width="650" height="550">
+</p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;4.1.3 Tela “biblioteca de exercícios”: 
+&nbsp;&nbsp;&nbsp;&nbsp;4.3.3 Tela “biblioteca de exercícios”: 
+<p align="center">
+<img src="Imagens/Figma/Biblioteca Exercícios.jpg" height="850">
+</p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;4.1.4 Tela “biblioteca de receitas”: 
+&nbsp;&nbsp;&nbsp;&nbsp;4.3.4 Tela “biblioteca de receitas”: 
+<p align="center">
+<img src="Imagens/Figma/Biblioteca Receitas.png" height="850">
+</p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;4.1.5 Tela “receitas específicas”:
+&nbsp;&nbsp;&nbsp;&nbsp;4.3.5 Tela “receitas específicas”:
+<p align="center">
+<img src="Imagens/Figma/Receita Específica.jpg" height="850">
+</p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;4.1.6 Tela “exercício específico”:
+&nbsp;&nbsp;&nbsp;&nbsp;4.3.6 Tela “exercício específico”:
+<p align="center">
+<img src="Imagens/Figma/Pág Exercício Específico.jpg" height="850">
+</p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;4.1.7 Tela “cadastro de exercício”:
+&nbsp;&nbsp;&nbsp;&nbsp;4.3.7 Tela “cadastro de exercício”:
+<p align="center">
+<img src="Imagens/Figma/Cadastro Exercício Específico.png" height="850">
+</p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;4.1.8 Tela “cadastro de receitas”:
+&nbsp;&nbsp;&nbsp;&nbsp;4.3.8 Tela “cadastro de receitas”:
+<p align="center">
+<img src="Imagens/Figma/Cadastro Receita Específica.jpg" height="850">
+</p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;4.1.8 Tela “cadastro de usuário”:
+&nbsp;&nbsp;&nbsp;&nbsp;4.3.9 Tela "login”:
+<p align="center">
+<img src="Imagens/Figma/Cadastro Receita Específica.jpg" height="850">
+</p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;4.1.9 Tela “página do usuário”: 
+&nbsp;&nbsp;&nbsp;&nbsp;4.3.10 Tela “cadastro de usuário”:
+<p align="center">
+<img src="Imagens/Figma/Login.jpg" height="850">
+</p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;4.3.11 Tela “página do usuário”: 
+<p align="center">
+<img src="Imagens/Figma/Página do Usuário.png" height="850">
+</p>
+
+<br>
 
 **Página Principal com Receitas e Exercícios:** 
 
@@ -384,6 +487,7 @@ romulochavesferraz@gmail.com
 - Receitas Saudáveis: nesta seção contém uma série de imagens de pratos saudáveis e uma breve descrição que incentiva o usuário a explorar as receitas. Há um carrossel de imagens mostrando diferentes pratos e um botão "Ver Mais" que direciona o usuário para mais receitas. 
 - Exercícios Físicos: similar à seção de receitas, esta parte da página mostra várias imagens de pessoas praticando exercícios físicos. A descrição convida o usuário a explorar diferentes rotinas de exercícios. Também possui um carrossel de imagens e um botão "Ver Mais" para acessar mais conteúdos sobre exercícios.
 &nbsp;&nbsp;&nbsp;&nbsp;A navegação principal inclui um logotipo da marca, um campo de busca e links para entrar ou se cadastrar.
+
 &nbsp;&nbsp;&nbsp;&nbsp;Os princípios gestálticos da página são:
 - Proximidade: as seções de "Receitas Saudáveis" e "Exercícios Físicos" estão bem definidas e os elementos dentro de cada seção são agrupados próximos uns dos outros. Isso facilita a percepção de que pertencem a categorias diferentes, ajudando o usuário a distinguir claramente entre os dois tipos de conteúdo. 
 - Boa continuidade (alinhamento): a estrutura linear e alinhada das seções facilita a navegação e a leitura contínua. As linhas de texto e as imagens estão organizadas de forma que o olhar do usuário seja guiado de maneira natural pela página. 
@@ -396,7 +500,9 @@ romulochavesferraz@gmail.com
 - Fornecer Feedbacks Informativos: os botões "Ver Mais" fornecem feedback visual claro, indicando ao usuário que há mais conteúdo disponível para visualização. 
 - Marcar o Final dos Diálogos: os botões de "Ver Mais" sinalizam a conclusão da visualização inicial, oferecendo uma transição clara para mais informações. 
 - Fornecer Controle de Iniciativa do Usuário: o usuário tem controle sobre o que deseja visualizar em mais detalhes, podendo clicar nos botões para explorar mais receitas ou exercícios. 
-- Reduzir a Carga de Memória de Trabalho: as informações essenciais são apresentadas diretamente na interface, evitando que o usuário precise lembrar de detalhes de outras páginas para entender o conteúdo atual.  
+- Reduzir a Carga de Memória de Trabalho: as informações essenciais são apresentadas diretamente na interface, evitando que o usuário precise lembrar de detalhes de outras páginas para entender o conteúdo atual.
+
+<br>
 
 **Página de Biblioteca de Receitas:**
 
@@ -420,6 +526,8 @@ romulochavesferraz@gmail.com
 - Fornecer Controle de Iniciativa do Usuário: o usuário pode escolher qual receita deseja visualizar em mais detalhes, proporcionando uma experiência interativa. 
 - Reduzir a Carga de Memória de Trabalho: as informações essenciais sobre cada receita são apresentadas diretamente no cartão, evitando que o usuário precise lembrar de detalhes adicionais para entender o conteúdo.
 
+<br>
+
 **Página de Receitas Específicas:** 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Esta interface exibe de forma organizada todas as informações necessárias para o preparo da receita exibida na tela. Ela é composta pelo título da receita, sua foto, seu rendimento, tempo de preparo, ingredientes e modo de fazer, além de um botão para a avalição dos usuários. A tela é limpa e organizada, com cada elemento bem delimitado e claramente associado à receita correspondente. 
@@ -434,6 +542,8 @@ romulochavesferraz@gmail.com
 - Fornecer Feedbacks Informativos: a interface fornece informações claras sobre o nome da receita, rendimento, tempo de preparo, ingredientes e modo de fazer, facilitando a compreensão imediata. 
 - Fornecer Controle de Iniciativa do Usuário: o usuário pode escolher se deseja ou não avaliar a receita e em caso positivo, ele pode escolher a pontuação de acordo com seu grau de satisfação, proporcionando uma experiência interativa. 
 - Reduzir a Carga de Memória de Trabalho: as informações essenciais sobre a receita são apresentadas diretamente, evitando que o usuário precise lembrar de detalhes adicionais para entender o conteúdo. 
+
+<br>
 
 **Tela Cadastro de Receitas:**
 
@@ -452,12 +562,15 @@ romulochavesferraz@gmail.com
 - Botão Visível: Os botões são destacados em cores que chamam a atenção, facilitando a localização pelo usuário. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Regras de Design 
+
 &nbsp;&nbsp;&nbsp;&nbsp;As 8 regras de ouro de Shneiderman foram seguidas da seguinte forma:
 - Consistência: Uso consistente de cores, fontes e layouts em toda a interface. 
 - Feedback Informativo: Cada campo de entrada oferece feedback visual quando está ativo. 
 - Prevenção de erros: Possibilidade de corrigir informações antes de enviar. 
 - Controle do Usuário: o design permite que o usuário escolha entre inserir, alterar ou excluir receita. 
 - Redução de Memória: o design é simples e direto e mostra todas as informações necessárias, reduzindo a necessidade do usuário memorizar informações.
+
+<br>
 
 **Página de Login:**
 
@@ -476,6 +589,8 @@ romulochavesferraz@gmail.com
 - Feedback informativo: o botão de login deixa claro a informação é para o usuário acessar o sistema. 
 - Controle do Usuário: o design permite que o usuário escolha entre fazer login ou se cadastrar. 
 - Redução de Memória: o design é simples e direto, reduzindo a necessidade de o usuário memorizar informações.
+
+<br>
 
 **Página de Confirmação:**
 
@@ -501,6 +616,8 @@ romulochavesferraz@gmail.com
 - Fornecer Controle de Iniciativa do Usuário: o usuário tem controle sobre a confirmação ou cancelamento da ação de exclusão, proporcionando uma experiência de usuário centrada no controle. 
 - Reduzir a Carga de Memória de Trabalho: o nome da receita a ser excluída é mostrado no modal, evitando que o usuário precise lembrar dessa informação e facilitando a compreensão da ação. 
 
+<br>
+
 **Tela Cadastro de Usuário:** 
 
 &nbsp;&nbsp;&nbsp;&nbsp;A interface apresentada é uma página de cadastro de usuário do sistema "Vida Ativa & Sabor". O formulário de cadastro inclui campos para nome, data de nascimento, email, confirmação de email, senha, confirmação de senha e telefone. Há um botão destacado de "Cadastrar" e um link para login, caso o usuário já possua uma conta. Na parte inferior, estão os links para política de privacidade, central de privacidade, termos de uso e redes sociais. 
@@ -517,7 +634,7 @@ romulochavesferraz@gmail.com
 - Espaçamento: Espaçamento adequado entre os campos para evitar sobrecarga visual e facilitar a interação. 
 - Botão Visível: O botão "Cadastrar" é destacado em uma cor que chama a atenção, facilitando a localização pelo usuário.
 
-**Regras de Design**
+&nbsp;&nbsp;&nbsp;&nbsp;Regras de Design:
 
 &nbsp;&nbsp;&nbsp;&nbsp;As 8 regras de ouro de Shneiderman foram seguidas da seguinte forma: 
 - Consistência: Uso consistente de cores, fontes e layouts em toda a interface. 
@@ -529,9 +646,12 @@ romulochavesferraz@gmail.com
 - Sentimento de Controle: Usuário pode ver todos os campos e informações requeridas de uma vez, sem surpresas. 
 - Redução de Carga Cognitiva: Interface limpa e simples, com todas as informações necessárias claramente apresentadas.
 
+<br>
+
 **Tela de Controle de Usuário:**
 
 &nbsp;&nbsp;&nbsp;&nbsp;A interface apresentada é uma página de usuário do sistema "Vida Ativa & Sabor". 
+
 &nbsp;&nbsp;&nbsp;&nbsp;Ela inclui um formulário com campos para nome, data de nascimento, email, senha e telefone. Há dois botões de ação: "Alterar cadastro" e "Confirmar alterações". A página também exibe o logo da empresa e links para a política de privacidade, central de privacidade, termos de uso, e redes sociais. 
 &nbsp;&nbsp;&nbsp;&nbsp;Princípios Gestálticos:
 - Proximidade: Os campos do formulário são agrupados de maneira lógica, com campos relacionados posicionados próximos uns dos outros. 
@@ -546,6 +666,7 @@ romulochavesferraz@gmail.com
 - Botões Visíveis: Botões de ação, como "Alterar cadastro" e "Confirmar alterações", são destacados com cores que chamam a atenção.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Regras de Design
+
 &nbsp;&nbsp;&nbsp;&nbsp;As 8 regras de ouro de Shneiderman foram seguidas da seguinte forma: 
 - Consistência: Uso consistente de cores, fontes e layouts em toda a interface. 
 - Atalhos: Botões de ação proporcionam um caminho rápido para editar e confirmar as informações do usuário. 
@@ -556,6 +677,8 @@ romulochavesferraz@gmail.com
 - Sentimento de Controle: Usuário pode ver todos os campos e informações requeridas de uma vez, sem surpresas. 
 - Redução de Carga Cognitiva: Interface limpa e simples, com todas as informações necessárias claramente apresentadas. 
 &nbsp;&nbsp;&nbsp;&nbsp;Nesta etapa deve-se dar uma ênfase na implementação do software de modo que possam ser realizados os testes com usuários na etapa seguinte. 
+
+<br>
 
 **Tela Cadastro de Exercícios**
 
@@ -574,12 +697,15 @@ romulochavesferraz@gmail.com
 - Botão Visível: Os botões são destacados em cores que chamam a atenção, facilitando a localização pelo usuário. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Regras de Design
+
 &nbsp;&nbsp;&nbsp;&nbsp;As 8 regras de ouro de Shneiderman foram seguidas da seguinte forma: 
 - Consistência: Uso consistente de cores, fontes e layouts em toda a interface. 
 - Feedback Informativo: Cada campo de entrada oferece feedback visual quando está ativo. 
 - Prevenção de erros: Possibilidade de corrigir informações antes de enviar. 
 - Controle do Usuário: o design permite que o usuário escolha entre inserir, alterar ou excluir exercício. 
 - Redução de Memória: o design é simples e direto e mostra todas as informações necessárias, reduzindo a necessidade do usuário memorizar informações. 
+
+<br>
 
 **Página de Exercício Específico:**
 
@@ -597,12 +723,16 @@ romulochavesferraz@gmail.com
 - Fornecer Controle de Iniciativa do Usuário: o usuário pode escolher se deseja ou não permanecer na página do exercício. 
 - Reduzir a Carga de Memória de Trabalho: as informações essenciais sobre a exercício são apresentadas diretamente, evitando que o usuário precise lembrar de detalhes adicionais para entender o conteúdo. 
 
-**5. Plano de Testes de Software**
+---
+
+## 5. Plano de Testes de Software
 
 - Planilha de avaliação heurística
 - Relatório de Testes com Usuário
 
-**Referências**
+---
+
+## Referências
 
 &nbsp;&nbsp;&nbsp;&nbsp;FOGAGNOLI, M. . A arte da boa alimentação: o projeto de educação alimentar de nutricionistas e nutrólogos e o Serviço de Alimentação da Previdência Social - SAPS (1940-1960). In: XXVII Simpósio Nacional de História - Conhecimento histórico e diálogo social, 2013, Natal. Anais do XXVII Simpósio Nacional de História, 2013. 
 
