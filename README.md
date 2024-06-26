@@ -726,9 +726,10 @@ romulochavesferraz@gmail.com
 ---
 
 ## 5. Plano de Testes de Software
-
-- Planilha de avaliação heurística
-- Relatório de Testes com Usuário
+<ol>
+<li><a href="Documentos/Avaliação_Heurística.xlsx">Planilha de avaliação heurística</a></li>
+<li><a href="Documentos/Relatórios dos Testes com Usuários">Relatório de Testes com Usuário</a></li>
+</ol>
 
 ---
 
