@@ -32,7 +32,7 @@ romulochavesferraz@gmail.com
 
 ---
 
-## 1. INTRODUÇÃO
+## 1. Introdução
 
 &nbsp;&nbsp;&nbsp;&nbsp;A alimentação desempenha um papel crucial na promoção da saúde e no bem-estar humano. No Brasil, as primeiras medidas voltadas para alimentação e nutrição surgiram a partir da segunda metade da década de 1930. Em 1940, foi criado o Serviço de Alimentação da Previdência Social (SAPS) com o objetivo de tornar as refeições acessíveis aos trabalhadores (Fogagnoli, 2013).
 
@@ -82,7 +82,7 @@ romulochavesferraz@gmail.com
 
 ---
 
-## 2. ESTADO DA ARTE
+## 2. Estado da Arte
 
 &nbsp;&nbsp;&nbsp;&nbsp;Alimentação Saudável: Um Estado da Arte. 
 
@@ -100,7 +100,7 @@ romulochavesferraz@gmail.com
 
 ---
 
-## 3. DOCUMENTO DE ESPECIFICAÇÃO DE REQUISITOS DE SOFTWARE
+## 3. Documento de Especificação de Requisitos de Software 
 
 **3.1 Objetivos deste documento** 
 
@@ -365,7 +365,7 @@ romulochavesferraz@gmail.com
 
 ---
 
-## 4. PROJETO DO DESIGN DE INTERAÇÃO
+## 4. Projeto do Design de Interação
 
 **4.1. Personas**
 
@@ -757,5 +757,12 @@ romulochavesferraz@gmail.com
 
  &nbsp;&nbsp;&nbsp;&nbsp;Tilman, D., & Clark, M. (2014). Global diets link environmental sustainability and human health. Nature. 
 &nbsp;&nbsp;&nbsp;&nbsp;Acesso em: 27/02/2024.
+
+---
+
+## Apresentação
+<ul>
+<li><a href="Documentos/Apresentação.pptx">Apresentação em PowerPoint</a></li>
+</ul>
 
 
