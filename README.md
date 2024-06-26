@@ -32,7 +32,7 @@ romulochavesferraz@gmail.com
 
 ---
 
-## 1. Introdução
+## 1. INTRODUÇÃO
 
 &nbsp;&nbsp;&nbsp;&nbsp;A alimentação desempenha um papel crucial na promoção da saúde e no bem-estar humano. No Brasil, as primeiras medidas voltadas para alimentação e nutrição surgiram a partir da segunda metade da década de 1930. Em 1940, foi criado o Serviço de Alimentação da Previdência Social (SAPS) com o objetivo de tornar as refeições acessíveis aos trabalhadores (Fogagnoli, 2013).
 
