@@ -12,12 +12,30 @@
         .title{
             margin-top: 70px;
         }
+        
+.button{
+    cursor: pointer;
+    top: 50%;
+    background-color: none;
+    border: none;
+    color: #212121;
+    font-size: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
         .container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 16px;
             padding: 16px;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
         }
 
         .recipe-card {
@@ -86,7 +104,7 @@
             <div class="container">
                 <div class="recipe-card">
                     <img src="assets/NavBar/3.webp" alt="Salada Tropical">
-                    <h2 class="recipe-title">Salada Tropical</h2>
+                    <a href="receita.html"><h2 class="recipe-title">Salada Tropical</h2></a>
                     <ul class="ingredient-list">
                         <li class="ingredient-item">Alface Americana</li>
                         <li class="ingredient-item">Manga em cubos</li>
@@ -154,6 +172,10 @@
         
         </div>
 
+        <div class="button">
+           <button class="btn" onclick="redirecionar()">Cadastrar Nova Receita</button>
+        </div>
+
     </div>
 
 <footer>
@@ -190,5 +212,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-QFUBQA+1knX9GfQTvSnsI5sViT3wfsih30w4Q6/FZabWM2KjkQFI4wdoQPsmJ9Uj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-MNJu6DvPauZgjB0Gtms3/Co2DmMCAw/i7D41cYpYDd1h81FZfZ9Bj8yzpL3D2s7H" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script>
+        function redirecionar() {
+            window.location.href = "cadreceitas.html";
+        }
+        </script>
 </body>
 </html>
